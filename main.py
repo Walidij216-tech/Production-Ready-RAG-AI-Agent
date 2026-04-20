@@ -36,7 +36,7 @@ inngest_client=inngest.Inngest(
     fn_id="RAG: Ingest PDF",
     trigger=inngest.TriggerEvent(event="rag/ingest_pdf"),
     throttle=inngest.Throttle(
-  count=2,period=datetime.timedelta(minute=1)
+  limit=2,period=datetime.timedelta(minutes=1)
 ),
 # function can run at most 2 times per 1 minute
     rate_limit=inngest.RateLimit(
